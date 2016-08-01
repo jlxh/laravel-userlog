@@ -1,0 +1,25 @@
+{
+    "name": "jlxh/laravel-userlog",
+    "type": "library",
+    "description": "User log for laravel",
+    "keywords": ["log", "laravel"],
+    "homepage": "https://github.com/jlxh/laravel-userlog",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "iat",
+            "email": "i@iat.net.cn",
+            "homepage": "http://iat.net.cn",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+            "php": ">=5.5.9",
+            "laravel": "5.1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jlxh": "src"
+        }
+    }
+}
