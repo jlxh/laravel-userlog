@@ -4,10 +4,10 @@ namespace Jlxh\UserLog;
 
 /**
  * This file is part of Entrust,
- * a role & permission management solution for Laravel.
+ * a userlog management solution for Laravel.
  *
  * @license MIT
- * @package Zizaco\Entrust
+ * @package Jlxh\UserLog
  */
 
 use Illuminate\Support\ServiceProvider;
@@ -44,7 +44,7 @@ class UserLogServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->registerEntrust();
+        $this->registerUserLog();
 
         $this->registerCommands();
 
@@ -56,7 +56,7 @@ class UserLogServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    private function registerEntrust()
+    private function registerUserLog()
     {
         $this->app->bind('userlog', function ($app) {
             return new UserLog($app);
@@ -76,7 +76,7 @@ class UserLogServiceProvider extends ServiceProvider
     }
 
     /**
-     * Merges user's and entrust's configs.
+     * Merges user's and userlog's configs.
      *
      * @return void
      */

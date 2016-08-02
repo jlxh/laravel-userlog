@@ -2,31 +2,31 @@
 
 /**
  * This file is part of Entrust,
- * a role & permission management solution for Laravel.
+ * a userlog management solution for Laravel.
  *
  * @license MIT
- * @package Zizaco\Entrust
+ * @package Jlxh\UserLog
  */
 
 return [
 
     /*
     |--------------------------------------------------------------------------
-    | Entrust Role Model
+    | UserLog Model
     |--------------------------------------------------------------------------
     |
-    | This is the Role model used by Entrust to create correct relations.  Update
-    | the role if it is in a different namespace.
+    | This is the UserLog model used by UserLog to create correct relations.  Update
+    | the userlog if it is in a different namespace.
     |
     */
     'userlog' => 'App\UserLog',
 
     /*
     |--------------------------------------------------------------------------
-    | Entrust Roles Table
+    | UserLog Table
     |--------------------------------------------------------------------------
     |
-    | This is the roles table used by Entrust to save roles to the database.
+    | This is the user log table used by UserLog to save logs to the database.
     |
     */
     'table_name' => 'user_log',
