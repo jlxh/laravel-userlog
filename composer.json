@@ -18,8 +18,11 @@
             "laravel/framework": ">=5.1"
     },
     "autoload": {
+        "classmap": [
+            "src/commands"
+        ],
         "psr-4": {
-            "Jlxh\\LaravelUserlog\\": "src"
+            "Jlxh\\LaravelUserlog\\": "src/UserLog/"
         }
     }
 }

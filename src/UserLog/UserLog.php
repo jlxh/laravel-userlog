@@ -1,6 +1,6 @@
 <?php
 
-namespace Jlxh\LaravelUserLog;
+namespace Jlxh\Userlog;
 
 class UserLog
 {
