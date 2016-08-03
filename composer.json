@@ -19,7 +19,7 @@
     },
     "autoload": {
         "classmap": [
-            "src/commands"
+            "src"
         ],
         "psr-4": {
             "Jlxh\\LaravelUserlog\\": "src/UserLog/"
