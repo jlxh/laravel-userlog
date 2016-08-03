@@ -3,6 +3,8 @@
 namespace Jlxh\UserLog;
 
 use DB;
+use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\Config;
 
 class UserLog
 {
@@ -10,16 +12,16 @@ class UserLog
     {
     }
 
-    public static function create($userId, $title = '', $type = 'S', $data = '', $sql = '')
+    public static function create($userId = 0, $title = '', $type = 'S', $data = '', $sql = '')
     {
-        $log = DB::table('user_log')->insert([
+        return DB::table(Config::get('userlog.table_name'))->insertGetId([
             'user_id' => $userId,
             'title' => $title,
             'type' => $type,
             'data' => $data,
-            'sql' => $sql
+            'sql' => $sql,
+            'ip' => Request::ip()
         ]);
-        dd($log);
     }
 
     public function run()
