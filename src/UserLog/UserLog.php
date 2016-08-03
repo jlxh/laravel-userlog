@@ -1,6 +1,8 @@
 <?php
 
-namespace Jlxh\Userlog;
+namespace Jlxh\UserLog;
+
+use DB;
 
 class UserLog
 {
@@ -8,9 +10,16 @@ class UserLog
     {
     }
 
-    public static function create()
+    public static function create($userId, $title = '', $type = 'S', $data = '', $sql = '')
     {
-        dd('create');
+        $log = DB::table('user_log')->insert([
+            'user_id' => $userId,
+            'title' => $title,
+            'type' => $type,
+            'data' => $data,
+            'sql' => $sql
+        ]);
+        dd($log);
     }
 
     public function run()

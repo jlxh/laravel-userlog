@@ -16,15 +16,15 @@ class UserLogSetupTables extends Migration
         Schema::create('{{ $userLogTable }}', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned()->comment('用户ID');
-            $table->enum('type', ['A', 'D', 'U', 'S'])->default('S')->comment('操作类型(增删改查)');
             $table->string('title')->comment('显示标题');
+            $table->enum('type', ['A', 'D', 'U', 'S'])->default('S')->comment('操作类型(增删改查)');
             $table->text('data')->comment('操作数据');
             $table->text('sql')->comment('SQL语句');
             $table->string('ip', 15)->comment('用户IP');
-            $table->timestamps('pushed_at')->comment('入队时间');
-            $table->timestamps('poped_at')->comment('出队时间');
-            $table->timestamps('created_at')->comment('创建时间');
-            $table->timestamps('deleted_at')->comment('删除时间');
+            $table->timestamp('pushed_at')->comment('入队时间');
+            $table->timestamp('poped_at')->comment('出队时间');
+            $table->timestamp('created_at')->comment('创建时间');
+            $table->timestamp('deleted_at')->comment('删除时间');
         });
     }
 
