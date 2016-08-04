@@ -1,4 +1,6 @@
-<?php namespace Jlxh/UserLog;
+<?php
+
+namespace Jlxh\UserLog;
 
 /**
  * This file is part of Entrust,
