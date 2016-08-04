@@ -2,7 +2,7 @@
 
 namespace Jlxh\UserLog;
 
-/**
+/*
  * This file is part of UserLog,
  * a userlog management solution for Laravel.
  *
@@ -41,30 +41,27 @@ class MigrationCommand extends Command
         $userLogTable = Config::get('userlog.table_name');
 
         $this->line('');
-        $this->info( "Tables: $userLogTable" );
+        $this->info("Tables: $userLogTable");
 
-        $message = "A migration that creates '$userLogTable'" . " tables will be created in database/migrations directory";
+        $message = "A migration that creates '$userLogTable'".' tables will be created in database/migrations directory';
 
         $this->comment($message);
         $this->line('');
 
-        if ($this->confirm("Proceed with the migration creation? [Yes|no]", "Yes")) {
-
+        if ($this->confirm('Proceed with the migration creation? [Yes|no]', 'Yes')) {
             $this->line('');
 
-            $this->info("Creating migration...");
+            $this->info('Creating migration...');
             if ($this->createMigration($userLogTable)) {
-
-                $this->info("Migration successfully created!");
+                $this->info('Migration successfully created!');
             } else {
                 $this->error(
                     "Couldn't create migration.\n Check the write permissions".
-                    " within the database/migrations directory."
+                    ' within the database/migrations directory.'
                 );
             }
 
             $this->line('');
-
         }
     }
 
@@ -77,15 +74,16 @@ class MigrationCommand extends Command
      */
     protected function createMigration($userLogTable)
     {
-        $migrationFile = base_path("/database/migrations") . "/" . date('Y_m_d_His') . "_userlog_setup_tables.php";
+        $migrationFile = base_path('/database/migrations').'/'.date('Y_m_d_His').'_userlog_setup_tables.php';
 
         $data = compact('userLogTable');
 
         $output = $this->laravel->view->make('userlog::generators.migration')->with($data)->render();
 
-        if (! file_exists($migrationFile) && $fs = fopen($migrationFile, 'x')) {
+        if (!file_exists($migrationFile) && $fs = fopen($migrationFile, 'x')) {
             fwrite($fs, $output);
             fclose($fs);
+
             return true;
         }
 
