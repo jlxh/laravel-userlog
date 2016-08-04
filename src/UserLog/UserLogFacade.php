@@ -2,7 +2,7 @@
 
 namespace Jlxh\UserLog;
 
-/**
+/*
  * This file is part of Jlxh,
  * a userlog management solution for Laravel.
  *

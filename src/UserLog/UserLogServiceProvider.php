@@ -2,7 +2,7 @@
 
 namespace Jlxh\UserLog;
 
-/**
+/*
  * This file is part of Entrust,
  * a userlog management solution for Laravel.
  *

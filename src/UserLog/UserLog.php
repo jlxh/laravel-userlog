@@ -4,7 +4,6 @@ namespace Jlxh\UserLog;
 
 use Illuminate\Support\Facades\Queue;
 
-use Jlxh\UserLog\UserLogJob;
 
 class UserLog
 {
@@ -13,9 +12,9 @@ class UserLog
     }
 
     /**
-     * Push log to queue
+     * Push log to queue.
      *
-     * @param int $userId
+     * @param int    $userId
      * @param string $title
      * @param string $type
      * @param string $data

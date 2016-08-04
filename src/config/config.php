@@ -5,7 +5,6 @@
  * a userlog management solution for Laravel.
  *
  * @license MIT
- * @package Jlxh\UserLog
  */
 
 return [
