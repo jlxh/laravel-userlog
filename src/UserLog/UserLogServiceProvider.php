@@ -30,7 +30,7 @@ class UserLogServiceProvider extends ServiceProvider
     {
         // Publish config files
         $this->publishes([
-            __DIR__.'/../config/config.php' => config_path('userlog.php'),
+            __DIR__ . '/../config/config.php' => config_path('userlog.php'),
         ]);
 
         // Register commands
@@ -85,7 +85,7 @@ class UserLogServiceProvider extends ServiceProvider
     private function mergeConfig()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/config.php', 'userlog'
+            __DIR__ . '/../config/config.php', 'userlog'
         );
     }
 
