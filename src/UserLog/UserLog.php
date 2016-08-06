@@ -24,6 +24,6 @@ class UserLog
      */
     public static function create($userId = 0, $title = '', $type = 'S', $data = '', $sql = '')
     {
-        return Queue::push((new UserLogJob(compact('userId', 'title', 'type', 'data', 'sql')))->delay(60));
+        return Queue::push(new UserLogJob(compact('userId', 'title', 'type', 'data', 'sql')));
     }
 }

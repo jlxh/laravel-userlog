@@ -72,8 +72,7 @@ class UserLogServiceProvider extends ServiceProvider
      */
     private function registerCommands()
     {
-        // $this->app->bindShared('command.userlog.migration', function ($app) {
-        $this->app->singleton('command.entrust.migration', function ($app) {
+        $this->app->bindShared('command.userlog.migration', function ($app) {
             return new MigrationCommand();
         });
     }

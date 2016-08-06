@@ -2,16 +2,15 @@
 
 namespace Jlxh\UserLog;
 
-use App\Jobs\Job;
-use DB;
 use Illuminate\Contracts\Bus\SelfHandling;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\DB;
 
-class UserLogJob extends Job implements SelfHandling, ShouldQueue
+class UserLogJob implements SelfHandling, ShouldQueue
 {
     use InteractsWithQueue, SerializesModels;
 
@@ -24,13 +23,14 @@ class UserLogJob extends Job implements SelfHandling, ShouldQueue
      */
     public function __construct($params)
     {
-        $this->log = ['user_id' => $params['userId'],
-            'title'             => $params['title'],
-            'type'              => $params['type'],
-            'data'              => $params['data'],
-            'sql'               => $params['sql'],
-            'ip'                => Request::ip(),
-            'pushed_at'         => date('Y-m-d H:i:s'),
+        $this->log = [
+            'user_id'   => $params['userId'],
+            'title'     => $params['title'],
+            'type'      => $params['type'],
+            'data'      => $params['data'],
+            'sql'       => $params['sql'],
+            'ip'        => Request::ip(),
+            'pushed_at' => date('Y-m-d H:i:s'),
         ];
     }
 
