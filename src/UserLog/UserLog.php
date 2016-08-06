@@ -4,7 +4,6 @@ namespace Jlxh\UserLog;
 
 use Illuminate\Support\Facades\Queue;
 
-
 class UserLog
 {
     public function __construct()
