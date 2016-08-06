@@ -12,7 +12,7 @@
         >
     <testsuites>
         <testsuite name="userlog">
-            <file>./tests/UserLogTest.php</file>
+            <directory suffix=".php">./tests/</directory>
         </testsuite>
     </testsuites>
     <filter>

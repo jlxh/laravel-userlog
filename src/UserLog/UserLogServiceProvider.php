@@ -61,6 +61,8 @@ class UserLogServiceProvider extends ServiceProvider
         $this->app->bind('userlog', function ($app) {
             return new UserLog($app);
         });
+
+        $this->app->alias('userlog', 'Jlxh\UserLog\UserLog');
     }
 
     /**
@@ -70,7 +72,8 @@ class UserLogServiceProvider extends ServiceProvider
      */
     private function registerCommands()
     {
-        $this->app->bindShared('command.userlog.migration', function ($app) {
+        // $this->app->bindShared('command.userlog.migration', function ($app) {
+        $this->app->singleton('command.entrust.migration', function ($app) {
             return new MigrationCommand();
         });
     }
