@@ -21,6 +21,7 @@
         "phpunit/phpunit": "~4.1"
     },
     "autoload": {
+        "classmap": ["src"],
         "psr-4": {
             "Jlxh\\Userlog\\": "src/"
         }
