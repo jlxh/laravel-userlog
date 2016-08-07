@@ -1,6 +1,7 @@
 # Laravel-UserLog (Laravel 5 Package)
 
 [![Build Status](https://travis-ci.org/jlxh/laravel-userlog.svg)](https://travis-ci.org/jlxh/laravel-userlog)
+[![StyleCI](https://styleci.io/repos/64642027/shield?style=flat)](https://styleci.io/repos/64642027)
 [![Latest Stable Version](https://poser.pugx.org/jlxh/laravel-userlog/v/stable)](https://packagist.org/packages/jlxh/laravel-userlog)
 [![Total Downloads](https://poser.pugx.org/jlxh/laravel-userlog/downloads)](https://packagist.org/packages/jlxh/laravel-userlog)
 [![Latest Unstable Version](https://poser.pugx.org/jlxh/laravel-userlog/v/unstable)](https://packagist.org/packages/jlxh/laravel-userlog)
