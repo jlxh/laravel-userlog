@@ -1,4 +1,0 @@
-preset: laravel
-
-enabled:
-    double_arrow_multiline_whitespaces
