@@ -1,5 +1,3 @@
-preset: laravel
-
 enabled:
   - blankline_after_open_tag
   - braces
