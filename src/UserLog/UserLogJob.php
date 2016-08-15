@@ -27,6 +27,8 @@ class UserLogJob implements SelfHandling, ShouldQueue
             'user_id'   => $params['userId'],
             'title'     => $params['title'],
             'type'      => $params['type'],
+            'object'    => $params['object'],
+            'object_id' => $params['object_id'],
             'data'      => $params['data'],
             'sql'       => $params['sql'],
             'ip'        => Request::ip(),

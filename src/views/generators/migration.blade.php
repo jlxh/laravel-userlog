@@ -12,19 +12,21 @@ class UserLogSetupTables extends Migration
      */
     public function up()
     {
-        // Create table for storing roles
+        // Create table for storing user log
         Schema::create('{{ $userLogTable }}', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unsigned()->comment('用户ID');
-            $table->string('title')->comment('显示标题');
-            $table->enum('type', ['A', 'D', 'U', 'S'])->default('S')->comment('操作类型(增删改查)');
-            $table->text('data')->comment('操作数据');
-            $table->text('sql')->comment('SQL语句');
-            $table->string('ip', 15)->comment('用户IP');
-            $table->timestamp('pushed_at')->comment('入队时间');
-            $table->timestamp('poped_at')->comment('出队时间');
-            $table->timestamp('created_at')->comment('创建时间');
-            $table->timestamp('deleted_at')->comment('删除时间');
+            $table->integer('user_id')->unsigned()->comment('user id');
+            $table->string('title')->comment('display title');
+            $table->enum('type', ['A', 'D', 'U', 'S'])->default('S')->comment('operation type');
+            $table->string('object')->comment('operation module');
+            $table->integer('object_id')->unsigned()->comment('operation object id');
+            $table->text('data')->comment('operation data');
+            $table->text('sql')->comment('operation sql');
+            $table->string('ip', 15)->comment('user ip');
+            $table->timestamp('pushed_at')->comment('pushed time');
+            $table->timestamp('poped_at')->comment('poped time');
+            $table->timestamp('created_at')->comment('created time');
+            $table->timestamp('deleted_at')->comment('deleted time');
         });
     }
 
