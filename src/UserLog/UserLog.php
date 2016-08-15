@@ -21,7 +21,7 @@ class UserLog
      *
      * @return string
      */
-    public static function create($userId = 0, $title = '', $type = 'S', 'object' = '', 'object_id' = 0, $data = '', $sql = '')
+    public static function create($userId = 0, $title = '', $type = 'S', $object = '', $object_id = 0, $data = '', $sql = '')
     {
         return Queue::push(new UserLogJob(compact('userId', 'title', 'type', 'object', 'object_id', 'data', 'sql')));
     }
